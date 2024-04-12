@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="icon" type="image/png" href="images/icons/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/util.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+        .limiter {
+            width: 100%;
+            margin: 0 auto;
+        }
+        .container-login100 {
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+        }
+        .wrap-login100 {
+            width: 400px;
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            padding: 77px 55px 33px 55px;
+            box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+        }
+        .login100-pic {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+        .login100-pic img {
+            max-width: 100%;
+            height: auto;
+        }
+        .login100-form-title {
+            font-size: 24px;
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .wrap-input100 {
+            position: relative;
+            width: 100%;
+            margin-bottom: 30px;
+        }
+        .input100 {
+            width: 100%;
+            height: 50px;
+            border-radius: 25px;
+            padding: 0 30px;
+            background-color: #f1f1f1;
+            border: 1px solid #ccc;
+            outline: none;
+        }
+        .input100:focus {
+            border-color: #333;
+        }
+        .focus-input100 {
+            position: absolute;
+            display: block;
+            width: 100%;
+            height: 100%;
+            border-radius: 25px;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            border: 1px solid transparent;
+        }
+        .focus-input100::before {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+            border-radius: 25px;
+            position: absolute;
+            top: -1px;
+            left: -1px;
+            z-index: 99;
+        }
+        .focus-input100::after {
+            content: '';
+            display: block;
+            width: calc(100% - 20px);
+            height: calc(100% - 20px);
+            border-radius: 25px;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 99;
+            background-color: #fff;
+        }
+        .symbol-input100 {
+            font-size: 15px;
+            color: #333;
+            position: absolute;
+            display: flex;
+            align-items: center;
+            top: 50%;
+            right: 25px;
+            transform: translateY(-50%);
+            z-index: 100;
+        }
+        .symbol-input100 i {
+            margin-right: 5px;
+        }
+        .container-login100-form-btn {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .login100-form-btn {
+            width: calc(100% - 30px);
+            height: 50px;
+            border-radius: 25px;
+            background-color: #f30c0c;
+            font-size: 16px;
+            color: #fff;
+            line-height: 1.2;
+            text-align: center;
+            border: none;
+            cursor: pointer;
+            transition: all 0.4s ease-in-out;
+            outline: none;
+        }
+        .login100-form-btn:hover {
+            background-color: #c90202;
+        }
+        .text-center {
+            text-align: center;
+        }
+        .p-t-12 {
+            padding-top: 12px;
+        }
+        .txt1 {
+            font-size: 15px;
+            color: #333;
+        }
+        .txt2 {
+            font-size: 15px;
+            color: #333;
+            text-decoration: underline;
+        }
+        .p-t-136 {
+            padding-top: 136px;
+        }
+    </style>
+</head>
+<body>
+    <div class="limiter">
+        <div class="container-login100">
+            <div class="wrap-login100">
+                <div class="login100-pic js-tilt" data-tilt>
+                    <img src="images/logo.jpg" alt="Logo">
+                </div>
+
+                <form class="login100-form validate-form" method="post" action="login.php">
+                    <span class="login100-form-title">
+                        Member Login
+                    </span>
+
+                    <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+                        <input class="input100" type="text" name="email" placeholder="Email">
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                        </span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input" data-validate="Password is required">
+                        <input class="input100" type="password" name="pass" placeholder="Password">
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                            <i class="fa fa-lock" aria-hidden="true"></i>
+                        </span>
+                    </div>
+
+                    <div class="container-login100-form-btn">
+                        <button class="login100-form-btn" type="submit" name="login">
+                            Login
+                        </button>
+                    </div>
+
+                    <div class="text-center p-t-12">
+                        <span class="txt1">
+                            Forgot
+                        </span>
+                        <a class="txt2" href="#">
+                            Username / Password?
+                        </a>
+                    </div>
+
+                    <div class="text-center p-t-136">
+                        <a class="txt2" href="Register.html">
+                            Create your Account
+                            <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+    <script src="vendor/bootstrap/js/popper.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendor/tilt/tilt.jquery.min.js"></script>
+    <script>
+        $('.js-tilt').tilt({
+            scale: 1.1
+        })
+    </script>
+</body>
+</html>

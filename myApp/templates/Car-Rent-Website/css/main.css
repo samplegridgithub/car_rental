@@ -1,0 +1,80 @@
+/* [ FONT ] */
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/poppins/Poppins-Regular.ttf'); 
+}
+
+/* [ RESET STYLES ] */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f9fa;
+}
+
+/* [ LINKS ] */
+a {
+  color: #666666;
+  text-decoration: none;
+  transition: color 0.4s;
+}
+
+a:hover {
+  color: #333333;
+}
+
+/* [ TYPOGRAPHY ] */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+p {
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* [ FORM STYLES ] */
+.container {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 30px;
+}
+
+label {
+  font-weight: bold;
+}
+
+.form-control {
+  border: 2px solid #dbdbdb;
+  border-radius: 20px;
+  padding: 12px 20px;
+  font-size: 16px;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 20px;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
